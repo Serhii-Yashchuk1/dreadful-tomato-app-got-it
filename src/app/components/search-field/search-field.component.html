@@ -1,0 +1,10 @@
+<div class="search-container">
+  <input
+    type="text"
+    class="search-input"
+    [placeholder]="UI.txt_search_name"
+    [(ngModel)]="term"
+    (keydown)="handleSearch($event)"
+  />
+  <span class="material-icons search-icon">search</span>
+</div>

@@ -1,0 +1,21 @@
+<header>
+  <div class="logo-container">
+    <app-logo (click)="this.redirectToHome()"></app-logo>
+    <app-navigation *ngIf="showIcons"></app-navigation>
+  </div>
+  <div class="button-container">
+    <div
+      *ngIf="showIcons"
+      class="filters-btn"
+      (click)="this.filterService.setDefaultFilterRange()"
+    >
+      <img src="assets/icon-filter.png" alt="Filter icon" />
+      {{ UI.txt_filters }}
+    </div>
+    <div class="login-btn">
+      {{ UI.txt_login }}
+      <img src="assets/icon-login.png" alt="Login icon" class="login-icon" />
+    </div>
+    <app-button></app-button>
+  </div>
+</header>

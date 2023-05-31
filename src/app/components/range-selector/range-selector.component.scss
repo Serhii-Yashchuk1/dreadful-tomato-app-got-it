@@ -1,0 +1,25 @@
+@import 'src/variables';
+
+.range-selector-container {
+  display: flex;
+  gap: 12px;
+  color: $primaryWhiteColor;
+  font-weight: $semiBoldFont;
+  font-size: 16px;
+  .range-selector-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .range-selector-select {
+      padding: 6px;
+      font-size: 14px;
+      background: $primaryWhiteColor;
+      color: $primaryBlackColor;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      cursor: pointer;
+    }
+  }
+}

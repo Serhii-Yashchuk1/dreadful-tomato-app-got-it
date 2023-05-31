@@ -1,0 +1,29 @@
+@import 'src/variables';
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  width: 100vw;
+  .link-list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    .link-item:hover {
+      color: $primaryGrayColor;
+    }
+  }
+  .icons-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    .stores-img {
+      cursor: pointer;
+    }
+  }
+  .footer-text {
+    color: #6c6c6c;
+  }
+}

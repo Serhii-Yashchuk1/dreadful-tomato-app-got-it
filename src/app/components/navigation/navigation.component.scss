@@ -1,0 +1,18 @@
+@import 'src/variables';
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  .nav-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    .nav-item {
+      @include iconStyles;
+      &.active-link {
+        background: $primaryRedColor;
+      }
+    }
+  }
+}

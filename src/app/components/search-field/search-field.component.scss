@@ -1,0 +1,21 @@
+@import 'src/variables';
+
+.search-container {
+  position: relative;
+  .search-input {
+    width: 520px;
+    padding: 6px 0 6px 36px;
+    font-size: 14px;
+    color: $primaryDarkColor;
+    background: $primaryWhiteColor;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+  }
+  .search-icon {
+    position: absolute;
+    left: 8px;
+    top: 2px;
+    color: $primaryRedColor;
+  }
+}

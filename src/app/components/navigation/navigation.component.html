@@ -1,0 +1,22 @@
+<nav class="navigation">
+  <ul class="nav-list">
+    <li
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active-link"
+      [routerLink]="routes.MOVIES"
+      class="nav-item"
+    >
+      <img src="assets/icon-movies.png" alt="Movies icon" />
+      {{ UI.txt_movies }}
+    </li>
+    <li
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active-link"
+      [routerLink]="routes.SERIES"
+      class="nav-item"
+    >
+      <img src="assets/icon-series.png" alt="Series icon" />
+      {{ UI.txt_series }}
+    </li>
+  </ul>
+</nav>

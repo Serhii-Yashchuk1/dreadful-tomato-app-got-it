@@ -1,0 +1,23 @@
+@import 'src/variables';
+
+.series-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background: $primaryDarkColor;
+  .series-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 1120px;
+    .series-title {
+      margin: 24px 0px 12px 0;
+      font-size: 1.6rem;
+      width: 100%;
+    }
+  }
+}

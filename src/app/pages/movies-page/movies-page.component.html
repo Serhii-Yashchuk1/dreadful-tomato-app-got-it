@@ -1,0 +1,32 @@
+<app-filter-block></app-filter-block>
+
+<div class="movies-page">
+  <div class="movies-container">
+    <h1 class="movies-title">{{ UI.txt_popular_movies }}</h1>
+    <app-show-item
+      *ngFor="
+        let movie of moviesService.filteredShows.length
+          ? moviesService.filteredShows
+          : (moviesService.movies
+            | search : term
+            | filter : yearRange
+            | slice
+              : (currentPage - 1) * itemsPerPage
+              : currentPage * itemsPerPage)
+      "
+      [showItem]="movie"
+    ></app-show-item>
+  </div>
+
+  <app-spinner *ngIf="isLoading"></app-spinner>
+
+  <app-pagination
+    *ngIf="!isLoading"
+    [totalItems]="
+      moviesService.filteredShows.length
+        ? moviesService.filteredShows.length
+        : moviesService.movies.length
+    "
+    (pageChange)="onPageChange($event)"
+  ></app-pagination>
+</div>

@@ -1,0 +1,33 @@
+$primaryFont: 'Lucida Sans Unicode';
+
+$primaryBgColor: #0b0b0b;
+$primaryDarkColor: #1a191a;
+$primaryRedColor: #c61a14;
+$primaryWhiteColor: #fff;
+$primaryBlackColor: #000;
+$primaryGrayColor: #484848;
+$translucentRedColor: #c81a14b3;
+$translucentBlackColor: #000000b3;
+$semiBoldFont: 600;
+
+@mixin iconStyles {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 60px;
+  padding: 0 20px;
+  font-weight: $semiBoldFont;
+  cursor: pointer;
+}
+
+@export $primaryFont;
+@export $primaryBgColor;
+@export $primaryDarkColor;
+@export $primaryRedColor;
+@export $primaryWhiteColor;
+@export $primaryBlackColor;
+@export $primaryGrayColor;
+@export $translucentRedColor;
+@export $translucentBlackColor;
+@export $semiBoldFont;
+@export iconStyles;

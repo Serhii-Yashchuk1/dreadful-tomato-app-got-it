@@ -1,0 +1,16 @@
+@import 'src/variables';
+
+.btn {
+  padding: 6px 28px;
+  font-size: 14px;
+  font-weight: $semiBoldFont;
+  border: none;
+  border-radius: 20px;
+  color: $primaryWhiteColor;
+  background: $primaryRedColor;
+  cursor: pointer;
+  transition: background 1s ease;
+  &:hover {
+    background: $translucentRedColor;
+  }
+}

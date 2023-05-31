@@ -1,0 +1,33 @@
+<footer>
+  <app-logo [logoHeight]="32"></app-logo>
+  <ul class="link-list">
+    <a
+      [routerLink]="[routes.HOME]"
+      rel="noreferrer"
+      title="Home"
+      class="link-item"
+      ><li>{{ UI.txt_home }}</li></a
+    >
+    <a href="#" rel="noreferrer" class="link-item"
+      ><li>{{ UI.txt_terms_of_use }}</li></a
+    >
+    <a href="#" rel="noreferrer" class="link-item"
+      ><li>{{ UI.txt_legal_notice }}</li></a
+    >
+    <a href="#" rel="noreferrer" class="link-item"
+      ><li>{{ UI.txt_help }}</li></a
+    >
+    <a href="#" rel="noreferrer" class="link-item"
+      ><li>{{ UI.txt_manage_account }}</li></a
+    >
+  </ul>
+  <div class="icons-container">
+    <img src="assets/app store.png" alt="App Store icon" class="stores-img" />
+    <img
+      src="assets/google-play.png"
+      alt="Google Play icon"
+      class="stores-img"
+    />
+  </div>
+  <span class="footer-text">{{ UI.txt_copyright }}</span>
+</footer>

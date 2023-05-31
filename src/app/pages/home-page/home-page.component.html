@@ -1,0 +1,8 @@
+<main>
+  <app-home-link
+    *ngFor="let link of homeLinks"
+    [title]="link.title"
+    [routerLink]="link.routerLink"
+    [imgPath]="link.imgPath"
+  ></app-home-link>
+</main>

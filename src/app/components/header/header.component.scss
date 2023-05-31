@@ -1,0 +1,26 @@
+@import 'src/variables';
+
+header {
+  height: 52px;
+  width: 1120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo-container {
+    display: flex;
+  }
+  .button-container {
+    display: flex;
+    align-items: center;
+    .filters-btn,
+    .login-btn {
+      @include iconStyles;
+      &:hover {
+        background: $primaryDarkColor;
+      }
+      .login-icon {
+        height: 24px;
+      }
+    }
+  }
+}

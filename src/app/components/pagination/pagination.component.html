@@ -1,0 +1,24 @@
+<div class="pagination">
+  <div class="pagination-arrow" (click)="prevPage()">
+    <span class="material-icons chevron-left">chevron_left</span>
+  </div>
+  <div class="pagination-pages">
+    <div
+      *ngFor="let page of getPages()"
+      class="pagination-page"
+      [class.active]="page == currentPage"
+      (click)="goToPage(page)"
+    >
+      <div
+        class="pagination-page-number"
+        [style.background-color]="page == currentPage ? '#c61a14' : '#810505'"
+        [style.color]="page == currentPage ? '#fff' : '#ccc'"
+      >
+        {{ page }}
+      </div>
+    </div>
+  </div>
+  <div class="pagination-arrow" (click)="nextPage()">
+    <span class="material-icons chevron-right">navigate_next</span>
+  </div>
+</div>

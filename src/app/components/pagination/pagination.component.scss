@@ -1,0 +1,47 @@
+@import 'src/variables';
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  width: 220px;
+  .pagination-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .chevron-left,
+    .chevron-right {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: $primaryWhiteColor;
+      &:hover {
+        color: $primaryRedColor;
+      }
+    }
+  }
+  .pagination-pages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .pagination-page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      margin: 0.2rem;
+      border-radius: 50%;
+      background-color: #810505;
+      cursor: pointer;
+      &.active {
+        background-color: $primaryRedColor;
+      }
+      .pagination-page-number {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

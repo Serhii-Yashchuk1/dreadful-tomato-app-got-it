@@ -1,0 +1,33 @@
+<app-filter-block></app-filter-block>
+
+<div class="series-page">
+  <div class="series-container">
+    <h1 class="series-title">{{ UI.txt_popular_series }}</h1>
+
+    <app-show-item
+      *ngFor="
+        let serial of seriesService.filteredShows.length
+          ? seriesService.filteredShows
+          : (seriesService.series
+            | search : term
+            | filter : yearRange
+            | slice
+              : (currentPage - 1) * itemsPerPage
+              : currentPage * itemsPerPage)
+      "
+      [showItem]="serial"
+    ></app-show-item>
+  </div>
+
+  <app-spinner *ngIf="isLoading"></app-spinner>
+
+  <app-pagination
+    *ngIf="!isLoading"
+    [totalItems]="
+      seriesService.filteredShows.length
+        ? seriesService.filteredShows.length
+        : seriesService.series.length
+    "
+    (pageChange)="onPageChange($event)"
+  ></app-pagination>
+</div>

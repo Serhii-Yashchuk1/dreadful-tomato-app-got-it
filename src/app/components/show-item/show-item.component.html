@@ -1,0 +1,21 @@
+<div class="show" *ngIf="showItem">
+  <div class="show-img-container">
+    <img
+      class="show-img"
+      [src]="showItem.images.posterArt.url"
+      [alt]="showItem.title"
+      [title]="showItem.title"
+    />
+    <div class="show-info" id="show-info">
+      <h3 class="show-title">{{ showItem.title }}</h3>
+      <p class="description-release">
+        <span class="material-icons calendar">calendar_today</span
+        >{{ showItem.releaseYear }}
+      </p>
+      <p class="description-text">{{ showItem.description }}</p>
+    </div>
+  </div>
+  <div class="show-title-container">
+    <h3 class="show-title">{{ showItem.title }}</h3>
+  </div>
+</div>

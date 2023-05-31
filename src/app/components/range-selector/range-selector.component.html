@@ -1,0 +1,24 @@
+<div class="range-selector-container">
+  <div class="range-selector-block">
+    <label for="fromYear" class="range-selector-label">{{ UI.txt_from }}</label>
+    <select
+      id="fromYear"
+      [(ngModel)]="fromYear"
+      (change)="updateRange()"
+      class="range-selector-select"
+    >
+      <option *ngFor="let year of yearList" [value]="year">{{ year }}</option>
+    </select>
+  </div>
+  <div class="range-selector-block">
+    <label for="toYear" class="range-selector-label">{{ UI.txt_to }}</label>
+    <select
+      id="toYear"
+      [(ngModel)]="toYear"
+      (change)="updateRange()"
+      class="range-selector-select"
+    >
+      <option *ngFor="let year of yearList" [value]="year">{{ year }}</option>
+    </select>
+  </div>
+</div>
